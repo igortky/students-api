@@ -100,3 +100,11 @@ func UpdateStudent(c *gin.Context) {
 	}
 	c.JSON(200, data)
 }
+
+func Index(c *gin.Context) {
+	c.HTML(http.StatusOK, "index.html", nil)
+}
+
+func RouteNotFound(c *gin.Context) {
+	c.HTML(http.StatusNotFound, "not_found.html", nil)
+}
